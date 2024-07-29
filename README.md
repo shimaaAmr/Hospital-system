@@ -5,8 +5,8 @@ Moreover, doctors are granted the ability to view, edit, and delete their own da
 The system is built using a combination of modern technologies including C#, Entity Framework, and ASP.NET.
 ![image](https://github.com/user-attachments/assets/18e79e8c-a418-4f41-aad3-71126419707c)
 ![image](https://github.com/user-attachments/assets/3366c3ef-2dee-4fed-9e5a-d3f0a053c3c8)
- ![image](https://github.com/user-attachments/assets/ddbf933d-5273-4686-b8c8-9b5f65f8e38b)
- ![image](https://github.com/user-attachments/assets/8c92bacb-cf36-4df7-a721-1335aac4403e)
+![image](https://github.com/user-attachments/assets/ddbf933d-5273-4686-b8c8-9b5f65f8e38b)
+![image](https://github.com/user-attachments/assets/8c92bacb-cf36-4df7-a721-1335aac4403e)
 
 
 
