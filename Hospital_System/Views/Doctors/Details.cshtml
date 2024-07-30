@@ -1,0 +1,39 @@
+﻿@model Doctor
+
+<h1 class="alert alert-primary text-center">Details  Doctor</h1>
+<div class="card col-6" style="width: 30rem ;">
+	<img src="@Model.ImagePath" class="card-img-top" alt="image doctor">
+	<div class="card-body text-center text-black">
+		<h3 class="card-title"><b>@Model.FullName</b></h3>
+	</div>
+	<div class="card-body">
+		<dl class="row">
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.Id)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.Id)</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.Position)</dt>
+			<dd class="col-8">@Html.DisplayFor((doc => doc.Position))</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.NationalId)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.NationalId)</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.HiringDate)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.HiringDate)</dd>
+
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.AttendenceTime)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.AttendenceTime)</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.PhoneNumber)</dt>
+			<dd class="col-8">@Html.DisplayFor((doc => doc.PhoneNumber))</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.EmailAddress)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.EmailAddress)</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.Password)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.Password)</dd>
+
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.IsActive)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.IsActive)</dd>
+			<dt class="col-4">@Html.DisplayNameFor(doc => doc.Bio)</dt>
+			<dd class="col-8">@Html.DisplayFor(doc => doc.Bio)</dd>
+
+		</dl>
+
+		<a asp-controller="Doctors" asp-action="GetIndexView" class="btn btn-primary">Back To List</a>
+
+	</div>
+</div>

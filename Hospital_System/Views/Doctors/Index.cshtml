@@ -1,0 +1,78 @@
+﻿
+<h1 style="background-color:#D3D3D3;color:#0275d8;text-align:center">
+	All Doctors
+</h1>
+@model List<Doctor>
+
+<a asp-controller="Doctors" asp-action="GetCreateView" class=" btn btn-primary mb-3"> Create New</a>
+@if (Model.Count() > 0)
+
+{
+	<form method=" get" asp-controller="Doctors" asp-action="GetIndexView" class="col-3">
+
+		<div class="mt-3 input-group mb-3">
+			<input name="search" value=" @ViewBag.SearchText" class=" form-control" placeholder="Search" />
+			<button type="submit" class="input-group-append btn btn-primary">
+				<i class="bi bi-search"></i>
+			</button>
+		</div>
+	</form>
+	<table class="table table-bordered table-hover table-striped text-center">
+
+		<thead>
+			<tr>
+				<th>Full Name</th>
+				<th>National Id</th>
+				<th>Occupation</th>
+				<th>Image</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var doctor in Model)
+			{
+				<tr>
+					<td>@doctor.FullName</td>
+					<td>@doctor.NationalId</td>
+					<td>@doctor.Position</td>
+					<td><img src="@doctor.ImagePath" style="width:150px;height:100px" /></td>
+
+					<td>
+
+						<a asp-controller="Doctors"
+						   asp-action="GetDetailsView"
+						   asp-route-id="@doctor.Id"
+						   style:"text-decuration-none"
+						   class="btn btn-primary"
+						   title="Details">
+							<i class="bi bi-list-ul"></i>
+
+						</a>
+						<a asp-controller="Doctors"
+						   asp-action="GetEditView"
+						   asp-route-id="@doctor.Id"
+						   style:"text-decuration-none"
+						   class="btn btn-success"
+						   title="Edit">
+							<i class="bi bi-pencil-square"></i>
+
+						</a>
+						<a asp-controller="Doctors"
+						   asp-action="GetDeleteView"
+						   asp-route-id="@doctor.Id"
+						   style:"text-decuration-none"
+						   class="btn btn-danger"
+						   title="Delete">
+							<i class="bi bi-trash"></i>
+
+						</a>
+					</td>
+				</tr>
+			}
+
+		</tbody>
+	</table>
+}
+else
+{
+	<h2 class="alert alert-danger text-center">There are no employees </h2>
+}
